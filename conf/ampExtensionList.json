@@ -1,0 +1,336 @@
+{
+  "amp-3q-player": {
+    "name": "amp-3q-player",
+    "version": "0.1"
+  },
+  "amp-access": {
+    "name": "amp-access",
+    "version": "0.1",
+    "dependencies": [
+      "amp-analytics"
+    ]
+  },
+  "amp-access-laterpay": {
+    "name": "amp-access-laterpay",
+    "version": "0.2",
+    "dependencies": [
+      "amp-access"
+    ]
+  },
+  "amp-accordion": {
+    "name": "amp-accordion",
+    "version": "0.1"
+  },
+  "amp-ad": {
+    "name": "amp-ad",
+    "version": "0.1"
+  },
+  "amp-embed": {
+    "name": "amp-ad",
+    "version": "0.1"
+  },
+  "amp-analytics": {
+    "name": "amp-analytics",
+    "version": "0.1"
+  },
+  "amp-anim": {
+    "name": "amp-anim",
+    "version": "0.1"
+  },
+  "amp-animation": {
+    "name": "amp-animation",
+    "version": "0.1"
+  },
+  "amp-apester-media": {
+    "name": "amp-apester-media",
+    "version": "0.1"
+  },
+  "amp-app-banner": {
+    "name": "amp-app-banner",
+    "version": "0.1"
+  },
+  "amp-audio": {
+    "name": "amp-audio",
+    "version": "0.1"
+  },
+  "amp-auto-ads": {
+    "name": "amp-auto-ads",
+    "version": "0.1"
+  },
+  "amp-state": {
+    "name": "amp-bind",
+    "version": "0.1"
+  },
+  "amp-brid-player": {
+    "name": "amp-brid-player",
+    "version": "0.1"
+  },
+  "amp-brightcove": {
+    "name": "amp-brightcove",
+    "version": "0.1"
+  },
+  "amp-call-tracking": {
+    "name": "amp-call-tracking",
+    "version": "0.1"
+  },
+  "amp-carousel": {
+    "name": "amp-carousel",
+    "version": "0.1"
+  },
+  "amp-dailymotion": {
+    "name": "amp-dailymotion",
+    "version": "0.1"
+  },
+  "amp-experiment": {
+    "name": "amp-experiment",
+    "version": "0.1"
+  },
+  "amp-facebook": {
+    "name": "amp-facebook",
+    "version": "0.1"
+  },
+  "amp-facebook-comments": {
+    "name": "amp-facebook-comments",
+    "version": "0.1"
+  },
+  "amp-facebook-like": {
+    "name": "amp-facebook-like",
+    "version": "0.1"
+  },
+  "amp-facebook-page": {
+    "name": "amp-facebook-page",
+    "version": "0.1"
+  },
+  "amp-fit-text": {
+    "name": "amp-fit-text",
+    "version": "0.1"
+  },
+  "amp-font": {
+    "name": "amp-font",
+    "version": "0.1"
+  },
+  "form": {
+    "name": "amp-form",
+    "version": "0.1"
+  },
+  "amp-fx-flying-carpet": {
+    "name": "amp-fx-flying-carpet",
+    "version": "0.1"
+  },
+  "amp-gfycat": {
+    "name": "amp-gfycat",
+    "version": "0.1"
+  },
+  "amp-gist": {
+    "name": "amp-gist",
+    "version": "0.1"
+  },
+  "amp-google-vrview-image": {
+    "name": "amp-google-vrview-image",
+    "version": "0.1"
+  },
+  "amp-hulu": {
+    "name": "amp-hulu",
+    "version": "0.1"
+  },
+  "amp-iframe": {
+    "name": "amp-iframe",
+    "version": "0.1"
+  },
+  "amp-ima-video": {
+    "name": "amp-ima-video",
+    "version": "0.1"
+  },
+  "amp-image-lightbox": {
+    "name": "amp-image-lightbox",
+    "version": "0.1"
+  },
+  "amp-imgur": {
+    "name": "amp-imgur",
+    "version": "0.1"
+  },
+  "amp-instagram": {
+    "name": "amp-instagram",
+    "version": "0.1"
+  },
+  "amp-install-serviceworker": {
+    "name": "amp-install-serviceworker",
+    "version": "0.1"
+  },
+  "amp-izlesene": {
+    "name": "amp-izlesene",
+    "version": "0.1"
+  },
+  "amp-jwplayer": {
+    "name": "amp-jwplayer",
+    "version": "0.1"
+  },
+  "amp-kaltura-player": {
+    "name": "amp-kaltura-player",
+    "version": "0.1"
+  },
+  "amp-lightbox": {
+    "name": "amp-lightbox",
+    "version": "0.1"
+  },
+  "lightbox": {
+    "name": "amp-lightbox-gallery",
+    "version": "0.1"
+  },
+  "amp-list": {
+    "name": "amp-list",
+    "version": "0.1"
+  },
+  "amp-live-list": {
+    "name": "amp-live-list",
+    "version": "0.1"
+  },
+  "amp-mustache": {
+    "name": "amp-mustache",
+    "version": "0.1"
+  },
+  "amp-nexxtv-player": {
+    "name": "amp-nexxtv-player",
+    "version": "0.1"
+  },
+  "amp-o2-player": {
+    "name": "amp-o2-player",
+    "version": "0.1"
+  },
+  "amp-ooyala-player": {
+    "name": "amp-ooyala-player",
+    "version": "0.1"
+  },
+  "amp-pinterest": {
+    "name": "amp-pinterest",
+    "version": "0.1"
+  },
+  "amp-playbuzz": {
+    "name": "amp-playbuzz",
+    "version": "0.1"
+  },
+  "amp-position-observer": {
+    "name": "amp-position-observer",
+    "version": "0.1"
+  },
+  "amp-reach-player": {
+    "name": "amp-reach-player",
+    "version": "0.1"
+  },
+  "amp-reddit": {
+    "name": "amp-reddit",
+    "version": "0.1"
+  },
+  "amp-riddle-quiz": {
+    "name": "amp-riddle-quiz",
+    "version": "0.1"
+  },
+  "amp-selector": {
+    "name": "amp-selector",
+    "version": "0.1"
+  },
+  "amp-sidebar": {
+    "name": "amp-sidebar",
+    "version": "0.1"
+  },
+  "amp-social-share": {
+    "name": "amp-social-share",
+    "version": "0.1"
+  },
+  "amp-soundcloud": {
+    "name": "amp-soundcloud",
+    "version": "0.1"
+  },
+  "amp-springboard-player": {
+    "name": "amp-springboard-player",
+    "version": "0.1"
+  },
+  "amp-sticky-ad": {
+    "name": "amp-sticky-ad",
+    "version": "1.0"
+  },
+  "amp-timeago": {
+    "name": "amp-timeago",
+    "version": "0.1"
+  },
+  "amp-twitter": {
+    "name": "amp-twitter",
+    "version": "0.1"
+  },
+  "amp-user-notification": {
+    "name": "amp-user-notification",
+    "version": "0.1"
+  },
+  "amp-video": {
+    "name": "amp-video",
+    "version": "0.1"
+  },
+  "amp-vimeo": {
+    "name": "amp-vimeo",
+    "version": "0.1"
+  },
+  "amp-wistia-player": {
+    "name": "amp-wistia-player",
+    "version": "0.1"
+  },
+  "amp-vine": {
+    "name": "amp-vine",
+    "version": "0.1"
+  },
+  "amp-vk": {
+    "name": "amp-vk",
+    "version": "0.1"
+  },
+  "amp-viz-vega": {
+    "name": "amp-viz-vega",
+    "version": "0.1"
+  },
+  "amp-web-push": {
+    "name": "amp-web-push",
+    "version": "0.1"
+  },
+  "amp-youtube": {
+    "name": "amp-youtube",
+    "version": "0.1"
+  },
+  "amp-byside-content": {
+    "name": "amp-byside-content",
+    "version": "0.1"
+  },
+  "amp-consent": {
+    "name": "amp-consent",
+    "version": "0.1"
+  },
+  "amp-date-picker": {
+    "name": "amp-date-picker",
+    "version": "0.1"
+  },
+  "amp-geo": {
+    "name": "amp-geo",
+    "version": "0.1"
+  },
+  "amp-fx": {
+    "name": "amp-fx-collection",
+    "version": "0.1"
+  },
+  "amp-bodymovin-animation": {
+    "name": "amp-bodymovin-animation",
+    "version": "0.1"
+  },
+  "amp-mathml": {
+    "name": "amp-mathml",
+    "version": "0.1"
+  },
+  "amp-story": {
+    "name": "amp-story",
+    "version": "0.1"
+  },
+  "amp-beopinion": {
+    "name": "amp-beopinion",
+    "version": "0.1"
+  },
+  "amp-addthis": {
+    "name": "amp-addthis",
+    "version": "0.1"
+  }
+}

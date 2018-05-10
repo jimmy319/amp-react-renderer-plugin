@@ -1,0 +1,35 @@
+{
+  "name": "example-css-modules",
+  "version": "1.0.0",
+  "description": "This is a example of using amp-react-renderer-plugin in React + css-modules project",
+  "main": "index.js",
+  "author": "CR Jimmy <jimmy74319@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-css-modules-transform": "^1.5.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "nodemon": "^1.17.3",
+    "webpack": "^3.1.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "write-file-webpack-plugin": "^4.2.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node ./dist/server.js",
+    "build": "BABEL_ENV=production babel src/ --out-dir dist --copy-files && webpack",
+    "dev": "nodemon --watch src --ignore src/AmpReactRenderer src/server-dev.js"
+  }
+}

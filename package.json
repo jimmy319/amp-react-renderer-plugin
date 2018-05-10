@@ -1,0 +1,51 @@
+{
+  "name": "amp-react-renderer-plugin",
+  "version": "0.1.0",
+  "description": ":zap:Plugin make it painless to create React component based AMP page:zap:",
+  "main": "./index-compiled.js",
+  "repository": "git@github.com:jimmy319/amp-react-renderer-plugin.git",
+  "author": "CR Jimmy <jimmy74319@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1"
+  },
+  "devDependencies": {
+    "amphtml-validator": "^1.0.23",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-css-modules-transform": "^1.5.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "jest": "^22.4.3",
+    "react": "16.2.0",
+    "react-ampify": "^0.0.1",
+    "react-dom": "16.2.0",
+    "standard": "^11.0.1",
+    "webpack": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.1.0"
+  },
+  "keywords": [
+    "amp",
+    "amp-html",
+    "react",
+    "webpack",
+    "webpack-plugin",
+    "plugin"
+  ],
+  "scripts": {
+    "build": "babel index.js --out-file index-compiled.js",
+    "test": "webpack --config webpack.test.config.js && jest && codecov",
+    "test:watch": "jest --watch",
+    "precommit": "lint-staged"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
+}

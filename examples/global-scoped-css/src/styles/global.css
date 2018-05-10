@@ -1,0 +1,16 @@
+.blue-box, .red-box, .green-box {
+	width: 100%;
+	height: 280px;
+}
+
+.blue-box {
+  background: blue;
+}
+
+.red-box {
+  background: red;
+}
+
+.green-box {
+  background: green;
+}

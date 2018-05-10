@@ -1,0 +1,11 @@
+examples/
+coverage/
+dist/
+tests/
+.babelrc
+.gitignore
+README.md
+webpack.test.config.js
+yarn.lock
+package-lock.json
+index.js

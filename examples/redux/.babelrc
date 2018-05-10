@@ -1,0 +1,16 @@
+{
+	"presets": ['env', 'react'],
+	"env": {
+		"production": {
+			"presets": ['env', 'react'],
+			"plugins": [
+				[
+		      "css-modules-transform", {
+		        "generateScopedName": "[name]__[local]___[hash:base64:5]",
+		        "extensions": [".css"]
+		      }
+		    ]
+			]
+		}
+	}
+}

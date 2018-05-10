@@ -1,0 +1,26 @@
+{
+	"presets": [
+		"react",
+		["env", {
+      "targets": {
+        "node": "6.8"
+      },
+      "useBuiltIns": true
+    }]
+	],
+	"env": {
+		"test": {
+			"presets": [
+				"react", "env"
+			],
+			"plugins": [
+				[
+		      "css-modules-transform", {
+            "generateScopedName": "[name]__[local]___[hash:base64:5]",
+            "extensions": [".css"]
+          }
+		    ]
+			]
+		}
+	}
+}
