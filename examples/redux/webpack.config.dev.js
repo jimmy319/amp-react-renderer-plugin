@@ -1,7 +1,7 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
-const AmpReactRendererPlugin = require('../../index.js')
+const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
 
 module.exports = {
   entry: {
