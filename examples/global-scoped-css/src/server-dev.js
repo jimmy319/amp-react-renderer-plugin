@@ -1,10 +1,6 @@
 require('babel-register')({
-  plugins: [[
-    'css-modules-transform', {
-      'generateScopedName': '[name]__[local]___[hash:base64:5]',
-      'extensions': ['.css']
-    }
-  ]]
+  babelrc: false,
+  presets: ['react', 'env']
 })
 
 const path = require('path')
