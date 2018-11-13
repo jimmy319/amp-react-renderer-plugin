@@ -1,5 +1,5 @@
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const AmpReactRendererPlugin = require('./index-compiled.js')
 const outputPath = path.join(__dirname, './dist')
 
@@ -100,23 +100,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              query: {
-                modules: true,
-                minimize: true,
-                localIdentName: '[name]__[local]___[hash:base64:5]'
-              }
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              minimize: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
             }
-          ]
-        })
+          }
+        ]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: '[name].css',
       disable: false,
       allChunks: false
