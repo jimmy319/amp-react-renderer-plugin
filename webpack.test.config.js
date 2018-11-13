@@ -1,9 +1,10 @@
 const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const AmpReactRendererPlugin = require('./index-compiled.js')
 const outputPath = path.join(__dirname, './dist')
 
 module.exports = {
+  mode: 'development',
   stats: {
     assets: false
   },
