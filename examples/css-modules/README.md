@@ -14,6 +14,8 @@ $ npm i
 $ npm run dev
 ```
 
+Now a valid AMP page - `http://localhost:3000/` is available.
+
 ### Prouction Mode
 
 ```
