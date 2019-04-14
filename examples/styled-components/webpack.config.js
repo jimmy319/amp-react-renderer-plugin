@@ -1,8 +1,8 @@
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: {
     home: [
       path.resolve(__dirname, './src/components/Application.js')
@@ -21,11 +21,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      disable: false,
-      allChunks: false
-    }),
     new AmpReactRendererPlugin()
   ]
 }
