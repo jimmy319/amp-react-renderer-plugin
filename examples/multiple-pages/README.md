@@ -14,6 +14,8 @@ $ npm i
 $ npm run dev
 ```
 
+Visit `http://localhost:3000/page1` and `http://localhost:3000/page2` to see how we handle mutiple pages application.
+
 ### Prouction Mode
 
 ```

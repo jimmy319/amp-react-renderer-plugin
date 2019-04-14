@@ -3,7 +3,6 @@ require('babel-register')({
   presets: ['react', 'env']
 })
 
-const path = require('path')
 const webpackConfig = require('../webpack.config.dev.js')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpack = require('webpack')

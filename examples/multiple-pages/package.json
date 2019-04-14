@@ -7,8 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "amp-react-renderer-plugin": "^0.1.0",
@@ -19,10 +19,10 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^0.6.0",
     "nodemon": "^1.17.3",
-    "webpack": "^3.1.0",
-    "webpack-dev-middleware": "^1.12.0",
+    "webpack": "^4.30.0",
+    "webpack-dev-middleware": "^3.6.2",
     "write-file-webpack-plugin": "^4.2.0"
   },
   "scripts": {

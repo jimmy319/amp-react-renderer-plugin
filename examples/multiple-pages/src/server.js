@@ -3,11 +3,12 @@ const express = require('express')
 const React = require('react')
 const Page1 = require('./components/Page1.js').default
 const Page2 = require('./components/Page2.js').default
-const ampHtmlRenderer = require('../bundle/AmpHtmlRenderer.js')
 
 const server = express()
 
 server.get('/page1', (req, res) => {
+  const ampHtmlRenderer = require('../bundle/AmpHtmlRenderer.js')
+
   res.send(
     ampHtmlRenderer({
       entryName: 'page1',
@@ -20,6 +21,8 @@ server.get('/page1', (req, res) => {
 })
 
 server.get('/page2', (req, res) => {
+  const ampHtmlRenderer = require('../bundle/AmpHtmlRenderer.js')
+
   res.send(
     ampHtmlRenderer({
       entryName: 'page2',
