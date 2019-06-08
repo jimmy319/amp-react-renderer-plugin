@@ -1,17 +1,21 @@
 {
 	"presets": [
-		"react",
-		["env", {
+		"@babel/react",
+		["@babel/env", {
       "targets": {
-        "node": "6.8"
-      },
-      "useBuiltIns": true
+        "node": "10"
+      }
     }]
 	],
 	"env": {
 		"test": {
 			"presets": [
-				"react", "env"
+				"@babel/react",
+				["@babel/env", {
+					"targets": {
+						"node": "10"
+					}
+				}]
 			],
 			"plugins": [
 				[

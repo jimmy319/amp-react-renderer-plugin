@@ -12,13 +12,7 @@ const {
 } = constants
 
 const findExtComponent = function (source) {
-  const reactComponentPattern = /require\(['|"]react['|"]\)/gm
   const ampExtComponentPattern = /['|"](amp-.*?|form)['|"]/gm
-
-  if (!reactComponentPattern.test(source)) {
-    return []
-  }
-
   let matchedGroups
   let result = []
 
@@ -57,7 +51,7 @@ const generateScriptTag = function (comp) {
 const generateExtComponentScripts = function (chunk) {
   let components = []
 
-  chunk.forEachModule((module) => {
+  chunk.getModules().forEach((module) => {
     const componentFilePattern = /\.(js|jsx)$/
     const { userRequest, _source } = module
 
@@ -110,7 +104,11 @@ class AmpReactRendererPlugin {
   }
 
   apply (compiler) {
-    compiler.plugin('emit', (compilation, callback) => {
+    if (compiler.options.mode === 'production') {
+      throw new Error('This plugin can only be used in development mode')
+    }
+
+    compiler.hooks.emit.tapAsync('AmpReactRendererPlugin', (compilation, callback) => {
       const { assets } = compilation
 
       // loop through each chunk

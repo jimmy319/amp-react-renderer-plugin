@@ -39,6 +39,7 @@ $ npm i -D amp-react-renderer-plugin
 const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
 
 module.exports = {
+  mode: ' development',
   entry: {
     'home': 'index.js'
   },
