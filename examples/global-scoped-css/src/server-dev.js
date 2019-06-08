@@ -1,6 +1,6 @@
-require('babel-register')({
+require('@babel/register')({
   babelrc: false,
-  presets: ['react', 'env']
+  presets: ['@babel/react', '@babel/env']
 })
 
 const webpackConfig = require('../webpack.config.dev.js')

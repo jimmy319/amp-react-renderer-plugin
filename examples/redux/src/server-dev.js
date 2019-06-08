@@ -1,6 +1,6 @@
-require('babel-register')({
+require('@babel/register')({
   babelrc: false,
-  presets: ['react', 'env'],
+  presets: ["@babel/env", "@babel/react"],
   plugins: [[
     'css-modules-transform', {
       'generateScopedName': '[name]__[local]___[hash:base64:5]',

@@ -1,6 +1,6 @@
 const path = require('path')
 const WriteFilePlugin = require('write-file-webpack-plugin')
-const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
+const AmpReactRendererPlugin = require('../../index-compiled')
 
 module.exports = {
   mode: 'development',

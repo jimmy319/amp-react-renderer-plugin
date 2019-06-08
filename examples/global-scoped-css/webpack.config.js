@@ -1,9 +1,9 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
+const AmpReactRendererPlugin = require('../../index-compiled')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     home: [
       path.resolve(__dirname, './src/styles/global.css'),
@@ -27,10 +27,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader',
-            query: {
-              minimize: true
-            }
+            loader: 'css-loader'
           }
         ]
       }

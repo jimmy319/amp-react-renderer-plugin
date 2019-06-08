@@ -1,11 +1,11 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
+const AmpReactRendererPlugin = require('../../index-compiled')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
-    home: path.resolve(__dirname, './src/components/Root.js')
+    home: path.resolve(__dirname, './src/components/Root')
   },
   output: {
     filename: '[name].js',
@@ -27,7 +27,6 @@ module.exports = {
             loader: 'css-loader',
             query: {
               modules: true,
-              minimize: true,
               localIdentName: '[name]__[local]___[hash:base64:5]'
             }
           }

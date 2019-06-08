@@ -11,14 +11,13 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "amp-react-renderer-plugin": "^0.1.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "css-loader": "^0.28.11",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.x.x",
+    "css-loader": "^2.x.x",
     "mini-css-extract-plugin": "^0.6.0",
     "nodemon": "^1.17.3",
     "webpack": "^4.30.0",
@@ -27,7 +26,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node ./dist/server.js",
-    "build": "BABEL_ENV=production babel src/ --out-dir dist --copy-files && webpack",
+    "build": "BABEL_ENV=production ./node_modules/@babel/cli/bin/babel.js src/ --out-dir dist --copy-files && webpack",
     "dev": "nodemon --watch src --ignore src/AmpReactRenderer src/server-dev.js"
   }
 }

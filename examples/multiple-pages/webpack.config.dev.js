@@ -1,7 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
-const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
+const AmpReactRendererPlugin = require('../../index-compiled')
 
 module.exports = {
   mode: 'development',
@@ -32,10 +32,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader',
-            query: {
-              minimize: true
-            }
+            loader: 'css-loader'
           }
         ]
       }

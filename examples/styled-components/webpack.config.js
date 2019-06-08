@@ -1,8 +1,8 @@
 const path = require('path')
-const AmpReactRendererPlugin = require('amp-react-renderer-plugin')
+const AmpReactRendererPlugin = require('../../index-compiled')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     home: [
       path.resolve(__dirname, './src/components/Application.js')
