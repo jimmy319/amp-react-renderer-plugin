@@ -1,6 +1,6 @@
 {
   "name": "amp-react-renderer-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": ":zap:Plugin make it painless to create React component based AMP page:zap:",
   "main": "./index-compiled.js",
   "repository": "git@github.com:jimmy319/amp-react-renderer-plugin.git",
