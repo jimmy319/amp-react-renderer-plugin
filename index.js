@@ -133,8 +133,9 @@ class AmpReactRendererPlugin {
     if (webpack.version.startsWith('4.')) {
       compiler.hooks.emit.tapAsync(
           this.constructor.name,
-          (compilation) => {
-            return this.setAssets(compilation)
+          (compilation, callback) => {
+            this.setAssets(compilation)
+            callback()
           }
       );
     } else {
@@ -142,13 +143,16 @@ class AmpReactRendererPlugin {
       // Specifically hook into thisCompilation, as per
       // https://github.com/webpack/webpack/issues/11425#issuecomment-690547848
       compiler.hooks.thisCompilation.tap(
-          this.constructor.name, (compilation) => {
+          this.constructor.name, (compilation, callback) => {
             compilation.hooks.processAssets.tapAsync({
               name: this.constructor.name,
               // TODO(jeffposnick): This may need to change eventually.
               // See https://github.com/webpack/webpack/issues/11822#issuecomment-726184972
               stage: PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER - 10,
-            }, () => this.setAssets(compilation))
+            }, () => {
+                this.setAssets(compilation)
+                callback()
+            })
           },
       )
     }
