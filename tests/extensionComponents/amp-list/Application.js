@@ -7,7 +7,6 @@ const Application = () => {
         height='100'
         layout='fixed-height'
         src='https://ampbyexample.com/json/examples.json'
-        template='amp-template-id'
         class='m1' />
     </React.Fragment>
   )

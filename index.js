@@ -1,5 +1,4 @@
-'use strict'
-
+const webpack = require('webpack')
 const extensionList = require('./conf/ampExtensionList.json')
 const HtmlComponentBuilder = require('./lib/HtmlComponentBuilder')
 const AmpHtmlRendererBuilder = require('./lib/AmpHtmlRendererBuilder')
@@ -103,33 +102,56 @@ class AmpReactRendererPlugin {
     this.ampHtmlRendererBuilder = new AmpHtmlRendererBuilder()
   }
 
+  setAssets (compilation) {
+    const { assets } = compilation
+
+    // loop through each chunk
+    // module scanning for retrieving all required styles and amp extension component scripts
+    compilation.chunks.forEach((chunk) => {
+      const { name: entryName } = chunk
+      const extComponentScripts = generateExtComponentScripts(chunk) || null
+      const inlineCssContent = generateInlineCssContent(chunk, assets)
+
+      const htmlSource = this.htmlComponentBuilder.build(extComponentScripts)
+      compilation.assets[`${entryName}-${HTML_COMPONENT_FILE_NAME}`] = getAssetObj(htmlSource)
+
+      const cssSource = inlineCssContent
+      compilation.assets[`${entryName}-${HTML_COMPONENT_CSS_FILE_NAME}`] = getAssetObj(cssSource)
+
+      const rendererSource = this.ampHtmlRendererBuilder.build()
+      compilation.assets[HTML_RENDERER_FILE_NAME] = getAssetObj(rendererSource)
+    })
+  }
+
   apply (compiler) {
     if (compiler.options.mode === 'production') {
       throw new Error('This plugin can only be used in development mode')
     }
 
-    compiler.hooks.emit.tapAsync('AmpReactRendererPlugin', (compilation, callback) => {
-      const { assets } = compilation
-
-      // loop through each chunk
-      // module scanning for retrieving all required styles and amp extension component scripts
-      compilation.chunks.forEach((chunk) => {
-        const { name: entryName } = chunk
-        const extComponentScripts = generateExtComponentScripts(chunk) || null
-        const inlineCssContent = generateInlineCssContent(chunk, assets)
-
-        const htmlSource = this.htmlComponentBuilder.build(extComponentScripts)
-        compilation.assets[`${entryName}-${HTML_COMPONENT_FILE_NAME}`] = getAssetObj(htmlSource)
-
-        const cssSource = inlineCssContent
-        compilation.assets[`${entryName}-${HTML_COMPONENT_CSS_FILE_NAME}`] = getAssetObj(cssSource)
-
-        const rendererSource = this.ampHtmlRendererBuilder.build()
-        compilation.assets[HTML_RENDERER_FILE_NAME] = getAssetObj(rendererSource)
-      })
-
-      callback()
-    })
+    // webpack v4/v5 compatibility:
+    // https://github.com/webpack/webpack/issues/11425#issuecomment-690387207
+    if (webpack.version.startsWith('4.')) {
+      compiler.hooks.emit.tapAsync(
+          this.constructor.name,
+          (compilation) => {
+            return this.setAssets(compilation)
+          }
+      );
+    } else {
+      const { PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER } = webpack.Compilation
+      // Specifically hook into thisCompilation, as per
+      // https://github.com/webpack/webpack/issues/11425#issuecomment-690547848
+      compiler.hooks.thisCompilation.tap(
+          this.constructor.name, (compilation) => {
+            compilation.hooks.processAssets.tapAsync({
+              name: this.constructor.name,
+              // TODO(jeffposnick): This may need to change eventually.
+              // See https://github.com/webpack/webpack/issues/11822#issuecomment-726184972
+              stage: PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER - 10,
+            }, () => this.setAssets(compilation))
+          },
+      )
+    }
   }
 }
 

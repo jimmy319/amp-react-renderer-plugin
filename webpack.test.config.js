@@ -107,7 +107,7 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            query: {
+            options: {
               modules: true,
               localIdentName: '[name]__[local]___[hash:base64:5]'
             }
@@ -118,9 +118,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      disable: false,
-      allChunks: false
+      filename: '[name].css'
     }),
     new AmpReactRendererPlugin()
   ]
