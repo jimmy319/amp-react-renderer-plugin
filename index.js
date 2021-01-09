@@ -139,19 +139,16 @@ class AmpReactRendererPlugin {
           }
       );
     } else {
-      const { PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER } = webpack.Compilation
+      const { PROCESS_ASSETS_STAGE_ADDITIONS } = webpack.Compilation
       // Specifically hook into thisCompilation, as per
       // https://github.com/webpack/webpack/issues/11425#issuecomment-690547848
       compiler.hooks.thisCompilation.tap(
-          this.constructor.name, (compilation, callback) => {
-            compilation.hooks.processAssets.tapAsync({
+          this.constructor.name, (compilation) => {
+            compilation.hooks.processAssets.tap({
               name: this.constructor.name,
-              // TODO(jeffposnick): This may need to change eventually.
-              // See https://github.com/webpack/webpack/issues/11822#issuecomment-726184972
-              stage: PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER - 10,
+              stage: PROCESS_ASSETS_STAGE_ADDITIONS,
             }, () => {
                 this.setAssets(compilation)
-                callback()
             })
           },
       )
