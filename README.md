@@ -1,15 +1,9 @@
 <p align="center"><img width="200" src="https://user-images.githubusercontent.com/1024985/39759272-d02dd7e8-5304-11e8-9805-846dd4e49b6a.png" /><img width="250" src="https://camo.githubusercontent.com/d18f4a7a64244f703efcb322bf298dcb4ca38856/68747470733a2f2f7765627061636b2e6a732e6f72672f6173736574732f69636f6e2d7371756172652d6269672e737667" /></p>
 
-<p align="center">
-  <img src='https://img.shields.io/badge/node.js-%3E=_6.8-green.png' />
-  <img src='https://img.shields.io/badge/webpack-%3E=_3-blue.png' />
-  <a href='https://travis-ci.org/jimmy319/amp-react-renderer-plugin'><img src='https://travis-ci.org/jimmy319/amp-react-renderer-plugin.svg?branch=master' /></a>
-  <a href="https://codecov.io/gh/jimmy319/amp-react-renderer-plugin">
-    <img src="https://codecov.io/gh/jimmy319/amp-react-renderer-plugin/branch/master/graph/badge.svg" />
-  </a>
-</p>
-
 # AMP React Renderer Plugin
+
+[![Component Build](https://github.com/jimmy319/amp-react-renderer-plugin/actions/workflows/component.yaml/badge.svg)](https://github.com/jimmy319/amp-react-renderer-plugin/actions/workflow/component.yaml)
+[![Npm Publish](https://github.com/jimmy319/amp-react-renderer-plugin/actions/workflows/publish.yaml/badge.svg)](https://github.com/jimmy319/amp-react-renderer-plugin/actions/workflow/publish.yaml)
 
 This ia a webpack plugin that make it painless to create a React component based AMP (Google Accelerated Mobile Pages) application easily. It can handle these jobs for you:
 
