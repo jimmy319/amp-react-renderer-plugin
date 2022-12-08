@@ -6,7 +6,7 @@
   "author": "CR Jimmy <jimmy74319@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^5.0.7",
