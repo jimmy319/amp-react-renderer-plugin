@@ -20,7 +20,7 @@
     "babel-loader": "^8.x.x",
     "babel-plugin-styled-components": "^1.10.0",
     "nodemon": "^1.17.3",
-    "webpack": "^4.30.0",
+    "webpack": "^5.75.0",
     "webpack-dev-middleware": "^3.6.2",
     "write-file-webpack-plugin": "^4.2.0"
   },
